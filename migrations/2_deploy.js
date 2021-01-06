@@ -42,7 +42,5 @@ module.exports = async function(deployer, network, accounts) {
     address: wethAddress,
     networks: _networks
   })
-  console.log(factory.address, 'factory.address')
-  console.log(wethAddress, 'wethAddress')
   await deployer.deploy(UniswapV2Router02, factory.address, wethAddress)
 }
