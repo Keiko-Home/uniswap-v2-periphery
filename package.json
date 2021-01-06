@@ -19,6 +19,7 @@
     "@uniswap/v2-core": "1.0.0"
   },
   "devDependencies": {
+    "@truffle/artifactor": "^4.0.92",
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
@@ -42,7 +43,8 @@
     "postcompile": "yarn copy-v1-artifacts",
     "pretest": "yarn compile",
     "test": "mocha",
-    "prepublishOnly": "yarn test"
+    "prepublishOnly": "yarn test",
+    "deploy:dev": "truffle migrate --reset --network development"
   },
   "license": "GPL-3.0-or-later"
 }
